@@ -896,7 +896,7 @@ body {
   /* Large Desktop Parallax Effect - 100px */
   @media only screen and (min-width: 100rem) {
     #hero-1619 .cs-background {
-      background: url("https://images.pexels.com/photos/7210698/pexels-photo-7210698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background: url("https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
