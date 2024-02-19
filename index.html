@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPlayground</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+            <img src="https://i.imgur.com/uhhimKr.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link cs-active">
+                            About
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Daycare
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">
+                            Services
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Grooming</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Long Term Care</a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cs-contact-group">
+            <a href="tel:+84 1985 33 999" class="cs-phone">
+                <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                +44 7777 77777
+            </a>
+            <div class="cs-social">
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
+                                
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1619">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">
+                <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.7">
+                    <path d="M0.621948 7.49889L6.40262 15L10.343 15L4.56231 7.49889L10.343 -4.2492e-07L6.40262 -2.52681e-07L0.621948 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M7.62195 7.49889L13.4026 15L17.343 15L11.5623 7.49889L17.343 -4.2492e-07L13.4026 -2.52681e-07L7.62195 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M14.7789 7.49889L20.5596 15L24.5 15L18.7193 7.49889L24.5 -4.2492e-07L20.5596 -2.52681e-07L14.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M22.7789 7.49889L28.5596 15L32.5 15L26.7193 7.49889L32.5 -4.2492e-07L28.5596 -2.52681e-07L22.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M30.7789 7.49889L36.5596 15L40.5 15L34.7193 7.49889L40.5 -4.2492e-07L36.5596 -2.52681e-07L30.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M38.7789 7.49889L44.5596 15L48.5 15L42.7193 7.49889L48.5 -4.2492e-07L44.5596 -2.52681e-07L38.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    </g>
+                </svg>
+                <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.7">
+                    <path d="M48.3781 7.49889L42.5974 15L38.657 15L44.4377 7.49889L38.657 -4.2492e-07L42.5974 -2.52681e-07L48.3781 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M41.3781 7.49889L35.5974 15L31.657 15L37.4377 7.49889L31.657 -4.2492e-07L35.5974 -2.52681e-07L41.3781 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M34.2211 7.49889L28.4404 15L24.5 15L30.2807 7.49889L24.5 -4.2492e-07L28.4404 -2.52681e-07L34.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M26.2211 7.49889L20.4404 15L16.5 15L22.2807 7.49889L16.5 -4.2492e-07L20.4404 -2.52681e-07L26.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M18.2211 7.49889L12.4404 15L8.50004 15L14.2807 7.49889L8.50004 -4.2492e-07L12.4404 -2.52681e-07L18.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M10.2211 7.49889L4.4404 15L0.500041 15L6.28071 7.49889L0.500042 -4.2492e-07L4.4404 -2.52681e-07L10.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    </g>
+                </svg>
+            </span>
+            <h1 class="cs-title">Give Your Furry Friends the Love and Care They Deserve at PawPlayground</h1>
+            <a href="tel:07783548531" class="cs-button-solid">Call Us Now</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Safe and Fun Environment</h3>
+                <p class="cs-item-text">
+                    We provide a secure space where your furry companions can enjoy various activities and interact with other friendly pets.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/speedometer.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Experienced Pet Care Professionals</h3>
+                <p class="cs-item-text">
+                    Our team consists of passionate and experienced pet care professionals dedicated to ensuring the well-being and happiness of every furry guest.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Tailored Activities</h3>
+                <p class="cs-item-text">
+                    We tailor our activities to suit the preferences and needs of each individual pet, ensuring they have a paws-itively wonderful time at PawPlayground.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Peace of Mind</h3>
+                <p class="cs-item-text">
+                    With PawPlayground, you can have peace of mind knowing that your beloved pets are in caring and capable hands while you're away or at work.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://images.pexels.com/photos/2408649/pexels-photo-2408649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <source media="(min-width: 601px)" srcset="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <img decoding="async" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="meeting" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+
+                                
+                                
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1377">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">Providing Top-Quality Services for Your Beloved Pets</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-briefcase.svg" alt="icon" width="48" height="48">
+                <a href="/" class="cs-link">
+                    <h3 class="cs-h3">Daycare Programs</h3>
+                    <picture class="cs-arrow-wrapper">
+                        <img class="cs-arrow" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                    alt="arrow" width="413" height="374" aria-hidden="true">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-chart.svg" alt="icon" width="48" height="48">
+                <a href="/" class="cs-link">
+                    <h3 class="cs-h3">Training Sessions</h3>
+                    <picture class="cs-arrow-wrapper">
+                        <img class="cs-arrow" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                    alt="arrow" width="413" height="374" aria-hidden="true">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-thumb.svg" alt="icon" width="48" height="48">
+                <a href="/" class="cs-link">
+                    <h3 class="cs-h3">Grooming Services</h3>
+                    <picture class="cs-arrow-wrapper">
+                        <img class="cs-arrow" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                    alt="arrow" width="413" height="374" aria-hidden="true">
+                    </picture>
+                </a>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-dial.svg" alt="icon" width="48" height="48">
+                <a href="/" class="cs-link">
+                    <h3 class="cs-h3">Medical Care</h3>
+                    <picture class="cs-arrow-wrapper">
+                        <img class="cs-arrow" decoding="async"
+                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
+                                    alt="arrow" width="413" height="374" aria-hidden="true">
+                    </picture>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+                                
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ============================================ -->
+<!--                  Gallery                     -->
+<!-- ============================================ -->
+
+<section id="gallery-1716">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">Memorable Moments at PawPlayground</h2>
+            <!--If you remove the cs-text, the rectangle shape will disappear.  If you need to remove it, transfer the :before and .cs-text:last-of-type styles to the cs-title on mobile and desktop-->
+            <p class="cs-text">
+                Enjoy a glimpse into the fun and happy times shared by pets at PawPlayground.
+            </p>
+            <a href="" class="cs-button-solid">View All</a>
+        </div>
+        <div class="cs-gallery">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)"
+                        srcset="https://images.pexels.com/photos/14935569/pexels-photo-14935569.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                        srcset="https://images.pexels.com/photos/14935569/pexels-photo-14935569.jpeg">
+                <img loading="lazy" decoding="async"
+                        src="https://images.pexels.com/photos/14935569/pexels-photo-14935569.jpeg" alt="picture"
+                        width="480" height="549">
+            </picture>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)"
+                        srcset="https://images.pexels.com/photos/7210698/pexels-photo-7210698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                        srcset="https://images.pexels.com/photos/7210698/pexels-photo-7210698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <img loading="lazy" decoding="async"
+                        src="https://images.pexels.com/photos/7210698/pexels-photo-7210698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="picture"
+                        width="480" height="549">
+            </picture>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)"
+                        srcset="https://images.pexels.com/photos/5255249/pexels-photo-5255249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                        srcset="https://images.pexels.com/photos/5255249/pexels-photo-5255249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <img loading="lazy" decoding="async"
+                        src="https://images.pexels.com/photos/5255249/pexels-photo-5255249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="picture"
+                        width="480" height="549">
+            </picture>
+        </div>
+    </div>
+</section>
+
+                        
+<br>
+<br>
+
+<br>
+
+<br>
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-1384">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">Tailored Pricing Plans for Your Furry Friend's Needs</h2>
+            <p class="cs-text">
+                PawPlayground offers flexible pricing plans designed to meet the unique needs of your beloved pets. Explore our packages below:
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Basic Package</span>
+                    <span class="cs-price">
+                        $75
+                        <span class="cs-duration">/Month</span>
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        Special Offer
+                    </div>
+                </div>
+                <ul class="cs-ul">
+                    <li class="cs-li">Daily Supervision</li>
+                    <li class="cs-li">Interactive Playtime</li>
+                    <li class="cs-li cs-disabled">Premium Treats</li>
+                    <li class="cs-li cs-disabled">Extended Hours</li>
+                    <li class="cs-li cs-disabled">Spa Services</li>
+                </ul>
+                <a href="" class="cs-button-transparent">Get Now</a>
+            </li>
+            <li class="cs-item cs-popular">
+                <div class="cs-flex">
+                    <span class="cs-package">Standard Package</span>
+                    <span class="cs-price">
+                        $99
+                        <span class="cs-duration">/Month</span>
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        Special Offer
+                    </div>
+                </div>
+                <ul class="cs-ul">
+                    <li class="cs-li">Daily Supervision</li>
+                    <li class="cs-li">Interactive Playtime</li>
+                    <li class="cs-li">Premium Treats</li>
+                    <li class="cs-li cs-disabled">Extended Hours</li>
+                    <li class="cs-li cs-disabled">Spa Services</li>
+                </ul>
+                <a href="" class="cs-button-transparent">Get Now</a>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Pawesome Package</span>
+                    <span class="cs-price">
+                        $299
+                        <span class="cs-duration">/Month</span>
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        Special Offer
+                    </div>
+                </div>
+                <ul class="cs-ul">
+                    <li class="cs-li">Daily Supervision</li>
+                    <li class="cs-li">Interactive Playtime</li>
+                    <li class="cs-li">Premium Treats</li>
+                    <li class="cs-li">Extended Hours</li>
+                    <li class="cs-li">Spa Services</li>
+                </ul>
+                <a href="" class="cs-button-transparent">Read More</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1672">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">Pawsitive Reviews from Our Happy Customers</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Britney Allison
+                        <span class="cs-job">Poodle Parent</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        PawPlayground is simply amazing! They took great care of my furry friend and provided a safe and fun environment. Cheapest Daycare in the area too. Highly recommended!
+                    </p>
+                </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/review2.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Brooklyn Simmons
+                        <span class="cs-job">Cockapoo Parent</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        PawPlayground exceeded my expectations! The staff is incredibly caring and attentive. My dog always comes home happy and tired from all the fun activities.
+                    </p>
+                </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot2.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                    </picture>
+                    <span class="cs-name">
+                        Cameron Williamson
+                        <span class="cs-job">Bulldog Parent</span>
+                    </span>
+                </div>
+                <div class="wrapper">
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <p class="cs-review">
+                        I'm impressed with PawPlayground's professionalism and attention to detail. My dog loves spending time there, and I feel confident knowing he's in good hands.
+                    </p>
+                </div>
+                <!--Quote Icon-->
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1105">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Get In Touch</span>
+            <h2 class="cs-title">Schedule an Appointment</h2>
+
+            <form class="cs-form" id="cs-form-1105" name="Contact Form" method="post" action="https://formspree.io/f/xleqbzzv">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1105" name="name" placeholder="Your Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email-1105" name="email" placeholder="Your Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="tel" id="phone-1105" name="phone" placeholder="Your Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1105" placeholder="Your Message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Schedule Now</button>
+            </form>
+            
+        </div>
+        <ul class="cs-ul">
+            <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                    <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                </picture>
+                <div class="cs-flex-group">
+                    <span class="cs-header">Phone</span>
+                    <a href="tel:07783 548531" class="cs-link">+44 7777 7777</a>
+                </div>
+            </li>
+            <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                    <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-email.svg" alt="mail icon" class="cs-icon" width="40" height="40" decoding="async">
+                </picture>
+                <div class="cs-flex-group">
+                    <span class="cs-header">Email</span>
+                    <a href="mailto:charlielfisher@hotmail.com" class="cs-link">bookings@pawplayground.com</a>
+                </div>
+            </li>
+            <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                    <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-pin.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                </picture>
+                <div class="cs-flex-group">
+                    <span class="cs-header">Address</span>
+                    <span class="cs-link">Zeals, Canada</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<br>
+<br>
+
+<br>
+
+<br>
+
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1292">
+    <div class="cs-container">      
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="https://i.imgur.com/uhhimKr.png" alt="logo" width="240" height="32">
+            </a>
+            <p class="cs-text">
+            </p>
+           
+        </div>
+    
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-copyright">Copyright© 2024. 
+            <a class="cs-copyright-link" href="">CFCode</a>
+            All Rights Reserved.
+        </span>
+        <a href="" class="cs-copyright-link">Terms of Service</a>
+        <a href="" class="cs-copyright-link">Privacy Policy</a>
+    </div>
+    <!--Floating Circles-->
+    <div class="cs-floater" aria-hidden="true"></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
