@@ -98,7 +98,7 @@ body {
       width: 3.5rem;
       height: 3.5rem;
       margin: 0 0 0 auto;
-      background-color: #ffcbcb;
+      background-color: #e05252;
       border: none;
       border-radius: 0.25rem;
       display: flex;
@@ -943,6 +943,7 @@ body {
     #services-1377 .cs-card-group {
         width: 100%;
         margin: 0;
+        margin-bottom: 30px;
         padding: 0;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
